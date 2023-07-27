@@ -191,7 +191,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--swiper-navigation-color, var(--swiper-theme-color));
+  // color: var(--swiper-navigation-color, var(--swiper-theme-color));
+  color: #AFAFAF;
+  background: transparent;
+  border: none;
 }
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
@@ -208,6 +211,7 @@
   text-transform: none;
   font-variant: initial;
   line-height: 1;
+  display: none;
 }
 .swiper-button-prev,
 .swiper-rtl .swiper-button-next {

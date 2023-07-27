@@ -1,0 +1,58 @@
+.header {
+  min-height: 658px;
+  background: conic-gradient(from 162deg at 16.03% 39.06%, #003d85, #b80027 282deg, #003d85);
+  color: $color-default-white;
+
+  @include vp-1199 {
+    min-height: 554px;
+    background: conic-gradient(from 162deg at 16.03% 39.06%, #003d85, #b80027 282deg, #003d85);
+  }
+
+  @include vp-767 {
+    min-height: 491px;
+    background: conic-gradient(from 162deg at 16.03% 39.06%, #003d85, #b80027 282deg, #003d85);
+  }
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    min-height: 82px;
+    padding-top: 26px;
+    width: 100%;
+  }
+
+  @include vp-767 {
+    
+    min-height: 45px;
+    padding-top: 5px;
+  }
+}
+
+.header__phone {
+  color: $color-default-white;
+  font-family: $ff-alumni-sans;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.78px;
+
+  @include vp-1199 {
+    font-size: 24px;
+    letter-spacing: 0.48px;
+    padding-top: 8px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    padding-top: 10px;
+  }
+}

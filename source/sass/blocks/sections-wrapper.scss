@@ -1,0 +1,8 @@
+.sections-wrapper {
+  min-height: 337px;
+  display: flex;
+
+  @include vp-1199 {
+    flex-direction: column;
+  }
+}

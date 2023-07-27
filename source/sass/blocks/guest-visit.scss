@@ -1,0 +1,39 @@
+.guest-visit {
+  width: 50%;
+  min-height: 336px;
+  box-sizing: border-box;
+  background-color: $color-sapphire;
+  color: $color-default-white;
+  padding: 55px 12.5% 63px 7.5%;
+
+  @include vp-1199 {
+    width: 100%;
+    padding: 54px 21.1% 63px 17.3%;
+    min-height: 324px;
+  }
+
+  @include vp-767 {
+    min-height: 386px;
+    padding: 58px 4.8% 66px;
+  }
+}
+
+.guest-visit__title {
+  font-family: $ff-alumni-sans;
+  text-transform: initial;
+  font-size: 54px;
+  line-height: 156%;
+  letter-spacing: 2.3px;
+  margin: 0;
+  -webkit-text-stroke: 1px $color-default-white;
+
+  @include vp-1199 {
+    font-size: 42px;
+    letter-spacing: 1.52px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    letter-spacing: 0.96px;
+  }
+}

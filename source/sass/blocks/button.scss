@@ -1,11 +1,11 @@
-.btn {
+.button {
+  font-family: $ff-roboto-condensed;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
   display: inline-flex;
-  padding: 10px 20px;
-
   color: $color-default-white;
 
-  background-color: $color-neon-blue;
-  border: none;
   cursor: pointer;
 
   transition: opacity $trans-default;

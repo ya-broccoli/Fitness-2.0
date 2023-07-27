@@ -1,8 +1,40 @@
 @font-face {
+  font-family: "AlumniSans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    url("../../fonts/AlumniSans-SemiBold.woff2"),
+    url("../../fonts/AlumniSans-SemiBold.woff");
+}
+
+@font-face {
+  font-family: "RobotoCondensed";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src:
+    url("../../fonts/RobotoCondensed-Light.woff2"),
+    url("../../fonts/RobotoCondensed-Light.woff");
+}
+
+@font-face {
+  font-family: "RobotoCondensed";
   font-style: normal;
   font-weight: 400;
-  font-family: "";
-
   font-display: swap;
-  src: url("../fonts/.woff2") format("woff2");
+  src:
+    url("../../fonts/RobotoCondensed-Regular.woff2"),
+    url("../../fonts/RobotoCondensed-Regular.woff");
+}
+
+
+@font-face {
+  font-family: "RobotoCondensed";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src:
+    url("../../fonts/RobotoCondensed-Bold.woff2"),
+    url("../../fonts/RobotoCondensed-Bold.woff");
 }

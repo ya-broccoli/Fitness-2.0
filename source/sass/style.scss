@@ -2,8 +2,10 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+
 // Swiper 7.4.1
-// @import "vendor/swiper";
+
+@import "vendor/swiper";
 
 // Global
 // ---------------------------------
@@ -18,11 +20,28 @@
 // Blocks
 // ---------------------------------
 
-@import "blocks/btn";
 @import "blocks/modal";
 @import "blocks/custom-input";
 @import "blocks/custom-toggle";
 @import "blocks/custom-select";
+@import "blocks/header";
+@import "blocks/logo";
+@import "blocks/hero";
+@import "blocks/button";
+@import "blocks/footer";
+@import "blocks/about";
+@import "blocks/subscription";
+@import "blocks/reviews";
+@import "blocks/event";
+@import "blocks/coaches";
+@import "blocks/advantages";
+@import "blocks/promo";
+@import "blocks/faq";
+@import "blocks/sections-wrapper";
+@import "blocks/guest-visit";
+@import "blocks/contacts";
+@import "blocks/form";
+@import "blocks/accordion";
 
 // ---------------------------------
 

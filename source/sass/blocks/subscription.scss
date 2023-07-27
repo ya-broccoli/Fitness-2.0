@@ -1,0 +1,357 @@
+.subscription {
+  min-height: 851px;
+  background-color: $color-ghost-white;
+  color: $color-sapphire;
+  padding: 120px 0;
+  box-sizing: border-box;
+
+  @include vp-1199 {
+    padding: 100px 0;
+  }
+
+  @include vp-767 {
+    padding: 63px 0 71px 0;
+  }
+}
+
+.subscription__programs {
+  position: relative;
+  z-index: 1;
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.subscription__wrapper {
+  margin: 0 auto;
+  width: 100%;
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.subscription__title {
+  font-family: $ff-alumni-sans;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.62px;
+  width: 20%;
+  margin: 0 auto;
+  margin-bottom: 16px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    letter-spacing: 1.26px;
+    width: 179px;
+    margin-bottom: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    letter-spacing: 0.96px;
+    width: 47%;
+    margin-bottom: 22px;
+  }
+}
+
+.subscription__controls {
+  position: relative;
+  width: 29.3%;
+  margin: 0 auto;
+  margin-bottom: 52px;
+  display: flex;
+  flex-direction: row;
+  column-gap: 13.5%;
+
+  &::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: rgba(120, 120, 120, 0.2);
+    bottom: -13px;
+    left: 0;
+    right: 0;
+  }
+
+  @include vp-1199 {
+    width: 332px;
+    column-gap: 54px;
+    margin-bottom: 56px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin: 0 auto;
+    column-gap: 45px;
+    margin-bottom: 47px;
+  }
+}
+
+.subscription__control {
+  position: relative;
+  font-family: $ff-roboto-condensed;
+  border: none;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  padding: 0;
+  background-color: $color-ghost-white;
+  color: rgba($color-sapphire, 0.5);
+
+  &.is-active::before {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: $color-torch-red;
+    bottom: -14px;
+    left: -1px;
+    right: 0;
+  }
+
+  &.is-active,
+  &:hover,
+  &:focus {
+    color: $color-sapphire;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 2px;
+      background-color: $color-torch-red;
+      bottom: -14px;
+      left: -1px;
+      right: 0;
+    }
+  }
+
+  &:disabled {
+    color: rgba($color-sapphire, 0.3);
+  }
+
+  @include vp-1199 {
+    font-size: 18px;
+  }
+
+  @include vp-767 {
+    width: 33%;
+    font-size: 16px;
+
+    &.is-active::before {
+      width: 114%;
+    }
+  }
+}
+
+.subscription__list {
+  font-family: $ff-roboto-condensed;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 30px;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    flex-direction: column;
+    row-gap: 40px;
+    width: 100%;
+  }
+
+  @include vp-767 {
+    row-gap: 35px;
+  }
+
+  &:not(.is-active) {
+    display: none;
+  }
+}
+
+.subscription__item {
+  position: relative;
+  width: 31%;
+  min-height: 448px;
+  background: $color-default-white;
+  border: 7px solid $color-default-white;
+  padding: 5.1% 5.5%;
+  box-sizing: border-box;
+  text-align: center;
+  flex-grow: 1;
+
+  &:hover {
+    border: 7px solid $border-gradient;
+    border-image: $border-gradient;
+    border-image-slice: 7;
+  }
+
+  @include vp-1199 {
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  @include vp-767 {
+    width: 96.8%;
+    padding: 45px 8.5%;
+    min-height: 384px;
+  }
+}
+
+.subscription__item-title {
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 13px;
+
+  @include vp-1199 {
+    margin-top: 25px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 110.15%;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.subscription__price {
+  position: relative;
+  color: $color-egyptian-blue;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 33px;
+  padding-left: 2.5%;
+  z-index: 1;
+
+  &::before {
+    position: absolute;
+    content: attr(data-price);
+    font-family: $ff-roboto-condensed;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    color: $color-gray;
+    top: -55px;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+
+    @include vp-767 {
+      font-size: 80px;
+      top: -45px;
+      left: 21px;
+    }
+  }
+
+  @include vp-767 {
+    font-size: 48px;
+    margin-bottom: 30px;
+
+    &::before {
+      width: 83%;
+    }
+  }
+}
+
+.subscription__price-icon {
+  width: 43px;
+  height: 42px;
+  margin-left: -5px;
+
+  @include vp-767 {
+    width: 34px;
+    height: 33px;
+  }
+}
+
+.subscription__text {
+  margin: 0;
+  margin-bottom: 66px;
+
+  @include vp-767 {
+    margin-bottom: 54px;
+  }
+}
+
+.subscription__button {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  width: 94.4%;
+  min-height: 64px;
+  padding: 20px 10%;
+  background: $color-transparent;
+  color: $color-sapphire;
+  border: 2px solid $color-sapphire;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    background: $button-gradient;
+    color: $color-default-white;
+    border: none;
+  }
+
+  &:active {
+    background: $button-gradient;
+    color: rgba($color-default-white, 0.25);
+    border: none;
+  }
+
+  &:disabled {
+    background: $color-transparent;
+    color: rgba($color-sapphire, 0.3);
+    border: 2px solid rgba($color-sapphire, 0.3);
+  }
+
+  @include vp-1199 {
+    width: 60%;
+  }
+
+  @include vp-767 {
+    width: 95%;
+    padding: 24px 10%;
+  }
+}
+
+.subscription__item:hover .subscription__button,
+.subscription__item:focus .subscription__button {
+  background: $button-gradient;
+  color: $color-default-white;
+  border: none;
+}
+
+.subscription__image img {
+  position: absolute;
+  right: 3.1%;
+  top: 28.94%;
+  z-index: 0;
+  transform: rotate(-30deg);
+
+  @include vp-1199 {
+    top: 35.2%;
+    width: 289px;
+    height: 345px;
+    right: 3%;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}

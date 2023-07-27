@@ -1,0 +1,140 @@
+.contacts {
+  width: 50%;
+  background-color: $color-default-white;
+  color: $color-sapphire;
+  padding: 46px 70px 63px 123px;
+  border-top: 1px solid #74819C;
+
+  @include vp-1199 {
+    width: 100%;
+    border: none;
+    padding: 53px 70px 63px 17.4%;
+    min-height: 351px;
+  }
+
+  @include vp-767 {
+    padding: 58px 5% 59px;
+    min-height: 507px;
+  }
+}
+
+.contacts__wrapper {
+  width: 88.3%;
+
+  @include vp-1199 {
+    width: 86.5%;
+    margin: 0 auto;
+  }
+
+  @include vp-1199 {
+    width: 100%;
+  }
+}
+
+.contacts__title {
+  position: relative;
+  width: 100%;
+  font-family: $ff-alumni-sans;
+  text-transform: capitalize;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 156%;
+  letter-spacing: 1.35px;
+  margin: 0;
+  margin-bottom: 27px;
+  margin-left: -2px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 102px;
+    background-color: #74819C;
+    top: 118px;
+    left: 53.9%;
+  }
+
+  @include vp-1199 {
+    font-size: 42px;
+    margin-bottom: 29px;
+
+    &::after {
+      height: 129px;
+      top: 100px;
+      left: 47.4%;
+    }
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    letter-spacing: 0.96px;
+    margin-bottom: 31px;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.contacts__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  row-gap: 11px;
+  column-gap: 74px;
+
+  @include vp-1199 {
+    row-gap: 15px;
+    column-gap: 30px;
+    grid-template-columns: 50% 50%;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 22px;
+  }
+}
+
+.contacts__item {
+  font-family: $ff-roboto-condensed;
+
+  &--schedule {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+
+.contacts__item-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  padding-bottom: 3px;
+
+  &--phone {
+    padding-bottom: 2px;
+  }
+
+  &--email {
+    padding-bottom: 2px;
+  }
+
+  @include vp-1199 {
+    font-size: 20px;
+    padding-bottom: 9px;
+  }
+}
+
+.contacts__text {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 152.34%;
+
+  @include vp-1199 {
+    font-size: 18px;
+  }
+}

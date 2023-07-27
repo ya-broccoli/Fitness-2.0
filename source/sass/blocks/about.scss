@@ -1,0 +1,305 @@
+.about {
+  color: $color-sapphire;
+  background-color: $color-default-white;
+  min-height: 756px;
+  position: relative;
+
+  @include vp-1199 {
+    margin-bottom: 98px;
+  }
+
+  @include vp-767 {
+    min-height: 925px;
+    margin-bottom: 0;
+  }
+}
+
+.about__description-wrapper {
+  width: 100%;
+  display: flex;
+  padding-top: 120px;
+  margin: 0 auto;
+
+  @include vp-1199 {
+    flex-direction: column;
+    padding-top: 100px;
+    width: 100%;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    padding-top: 63px;
+    width: 100%;
+  }
+}
+
+.about__description {
+  width: 35%;
+  margin-right: 7.2%;
+  margin-left: 5.3%;
+  text-align: left;
+
+  @include vp-1199 {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.about__title {
+  font-family: $ff-alumni-sans;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.44px;
+  margin-bottom: 5px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    letter-spacing: 1.26px;
+    margin: 0;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    letter-spacing: 0.96px;
+    text-align: start;
+    margin-bottom: 5px;
+  }
+}
+
+.about__feature {
+  font-family: $ff-roboto-condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin: 0;
+  margin-bottom: 40px;
+
+  @include vp-1199 {
+    margin-bottom: 33px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 25px;
+    text-align: start;
+  }
+}
+
+.about__text {
+  font-family: $ff-roboto-condensed;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+  margin: 0;
+
+  &--main {
+    margin-bottom: 8px;
+
+    @include vp-1199 {
+      margin-bottom: 44px;
+    }
+
+    @include vp-767 {
+      width: 90%;
+      text-align: start;
+    }
+  }
+
+  &--secondary {
+    @include vp-1199 {
+      display: none;
+    }
+  }
+}
+
+.about__image {
+  width: 65%;
+
+  @include vp-1199 {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    min-height: 313px;
+    position: absolute;
+    top: 335px;
+    left: 0;
+  }
+}
+
+.about__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__video {
+  position: absolute;
+  width: 26.65%;
+  bottom: 120px;
+  left: 39.5%;
+  background-color: rgba(147, 164, 196, 0.5);
+
+  @include vp-1199 {
+    bottom: 2px;
+    width: 34.6%;
+    left: 32.7%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: 167px;
+    position: absolute;
+    left: 0;
+    bottom: 70px;
+  }
+}
+
+.about__video img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__video-button {
+  padding: 0;
+  position: absolute;
+  content: "";
+  width: 72px;
+  height: 72px;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: none;
+  transform: translate(-50%, -50%);
+  background: $play-gradient;
+  z-index: 3;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: $color-transparent;
+    outline: 2px solid rgba($color-torch-red, 0.2);
+    transform: translate(-13%, -13%);
+    border-radius: 50%;
+
+    @include vp-1199 {
+      width: 73px;
+      height: 73px;
+      transform: translate(-19%, -16%);
+    }
+
+    @include vp-767 {
+      transform: translate(-17%, -13%);
+    }
+  }
+
+  @include vp-1199 {
+    width: 52px;
+    height: 52px;
+    transform: translate(-55.6%, -55%);
+    padding-left: 3px;
+    top: 85px;
+    left: 51%;
+
+    &::before {
+      width: 70px;
+      height: 70px;
+      transform: translate(-17%, -13%);
+    }
+  }
+
+  @include vp-767 {
+    transform: translate(-49%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+}
+
+.about__video-button:hover,
+.about__video-button:focus {
+  background: $color-default-white;
+
+  &::before {
+    outline: 2px solid $color-sapphire;
+  }
+}
+
+.about__video-button:hover .about__video-button-icon,
+.about__video-button:focus .about__video-button-icon {
+  fill: $color-sapphire;
+}
+
+.about__video-button:active {
+  background: $color-default-white;
+  width: 58px;
+  height: 58px;
+  transform: translate(-50%, -50%);
+
+  &::before {
+    transform: translate(-21%, -21%);
+    outline: 2px solid $color-sapphire;
+  }
+
+  @include vp-1199 {
+    width: 40px;
+    height: 40px;
+    transform: translate(-59%, -57%);
+
+    &::before {
+      transform: translate(-25%, -20%);
+    }
+  }
+
+  @include vp-767 {
+    width: 40px;
+    height: 40px;
+
+    &::before {
+      transform: translate(-25%, -21%);
+    }
+  }
+}
+
+.about__video-button:active .about__video-button-icon {
+  fill: $color-default-black;
+  top: 22px;
+  left: 42%;
+
+  @include vp-1199 {
+    top: 14px;
+    left: 40%;
+  }
+
+  @include vp-767 {
+    top: 14px;
+  }
+}
+
+.about__video-button-icon {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 30px;
+  left: 45%;
+  fill: $color-default-white;
+
+  @include vp-1199 {
+    top: 20px;
+    left: 40%;
+  }
+}
