@@ -13,7 +13,6 @@ const initCoachesSlider = () => {
 
     loop: true,
     direction: 'horizontal',
-    cssMode: true,
 
     breakpoints: {
       1200: {

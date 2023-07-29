@@ -14,7 +14,7 @@
 
   @include vp-767 {
     padding: 64px 0 60px 0;
-    min-height: 551px;
+    min-height: 549px;
   }
 }
 
@@ -44,13 +44,13 @@
 
   @include vp-1199 {
     font-size: 42px;
-    margin-bottom: 40px;
+    margin-bottom: 41px;
   }
 
   @include vp-767 {
     font-size: 32px;
     letter-spacing: 0.96px;
-    margin-bottom: 44px;
+    margin-bottom: 42px;
   }
 }
 
@@ -80,22 +80,35 @@
   }
 }
 
-.reviews__avatar img {
-  display: block;
-  width: 80px;
+.reviews__avatar {
+  width: 17.5%;
   height: 80px;
-  margin-right: 28px;
+  border-radius: 50%;
+  background-color: $color-sapphire;
+  margin-right: 29px;
   margin-top: 8px;
-  margin-left: 9px;
+  margin-left: 8px;
+
+  @include vp-1199 {
+    margin-right: 27px;
+    margin-top: 7px;
+    margin-left: 10px;
+  }
 
   @include vp-767 {
-    width: 68px;
+    width: 30.1%;
     height: 68px;
     position: absolute;
     margin: 0;
     top: 40px;
     left: 41px;
   }
+}
+
+.reviews__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .reviews__text-wrapper {
@@ -119,7 +132,7 @@
   margin-bottom: 11px;
 
   @include vp-767 {
-    width: 42.5%;
+    width: 44%;
     line-height: 130%;
     margin-left: auto;
     margin-bottom: 22px;
@@ -140,12 +153,70 @@
 
 .reviews__button {
   position: absolute;
-  top: 43%;
-  left: -2%;
+  top: 46px;
+  width: 56px;
+  height: 56px;
+  padding: 10px 10px 10px 5px;
+  border-radius: 50%;
+  background-color: $color-transparent;
+  border: none;
 
   &--prev {
-    left: 99.5%;
-    top: 40%;
+    left: 800%;
+  }
+
+  &--next {
     transform: rotate(180deg);
+    right: 800%;
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $color-sapphire;
+  }
+
+  &:active {
+    background-color: $color-sapphire;
+  }
+
+  @include vp-1199 {
+    top: 34px;
+
+    &--prev {
+      left: -93%;
+    }
+
+    &--next {
+      left: 0;
+    }
+  }
+
+  @include vp-767 {
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+    top: 43px;
+
+    &--prev {
+      left: -79%;
+    }
+
+    &--next {
+      left: 60%;
+    }
+  }
+}
+
+.reviews__button:active .reviews__button-icon {
+  stroke: $color-default-white;
+}
+
+.reviews__button-icon {
+  stroke: $color-sapphire;
+  fill: $color-transparent;
+
+  @include vp-767 {
+    width: 10px;
+    height: 19px;
   }
 }

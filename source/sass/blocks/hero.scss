@@ -19,13 +19,13 @@
   flex-direction: row-reverse;
   padding-top: 88px;
   width: 34%;
-  margin-right: 4.3%;
+  margin-right: 5.65%;
 
 
   @include vp-1199 {
     padding-top: 50px;
     width: 50%;
-    margin-right: 30px;
+    margin-right: 3.9%;
   }
 
   @include vp-767 {
@@ -56,7 +56,7 @@
   font-weight: 600;
   line-height: normal;
   letter-spacing: 1.44px;
-  width: 43%;
+  width: 44%;
   margin-left: auto;
   margin-bottom: 14px;
   text-transform: lowercase;
@@ -94,7 +94,7 @@
     font-size: 72px;
     letter-spacing: 3.6px;
     margin-bottom: 37px;
-    width: 100%;
+    width: 99%;
     text-transform: none;
   }
 
@@ -112,7 +112,7 @@
   background-color: $color-transparent;
   letter-spacing: 0.6px;
   border: 4px solid $color-default-white;
-  padding: 20px 51px;
+  padding: 14px 17.7%;
   box-sizing: border-box;
   font-family: $ff-roboto-condensed;
   text-transform: uppercase;
@@ -137,20 +137,20 @@
 
   @include vp-1199 {
     width: 62.3%;
-    padding: 14px 9%;
+    padding: 14px 10.1%;
     line-height: 24px;
   }
 
   @include vp-767 {
     width: 100%;
-    padding: 16px 21%;
+    padding: 16px 28.5%;
   }
 }
 
 .hero__list {
   margin: 0;
   padding: 0;
-  width: 20.2%;
+  width: 20%;
   list-style: none;
   text-align: right;
   font-family: $ff-roboto-condensed;
@@ -175,14 +175,15 @@
 }
 
 .hero__image {
+  width: 43.13%;
+  height: 556px;
   margin-top: -23px;
-  margin-left: 1.4%;
+  background-color: $color-sapphire;
 
   @include vp-1199 {
-    width: 50%;
+    width: 49.5%;
     height: 390px;
     margin: 0;
-    margin-left: -0.5%;
   }
 
   @include vp-767 {
