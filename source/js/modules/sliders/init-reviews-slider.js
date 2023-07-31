@@ -3,16 +3,18 @@ const buttonNext = document.querySelector('.reviews__button--next');
 const buttonPrev = document.querySelector('.reviews__button--prev');
 
 const initSliderReviews = () => {
-  new Swiper(reviewsSlider, {
+  if (reviewsSlider) {
+    return new window.Swiper(reviewsSlider, {
+      navigation: {
+        nextEl: buttonNext,
+        prevEl: buttonPrev,
+      },
 
-    navigation: {
-      nextEl: buttonNext,
-      prevEl: buttonPrev,
-    },
-
-    slidesPerView: 1,
-    spaceBetween: 30,
-  });
+      slidesPerView: 1,
+      spaceBetween: 30,
+    });
+  }
+  return null;
 };
 
 export {initSliderReviews};

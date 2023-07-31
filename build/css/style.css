@@ -5386,7 +5386,7 @@ button,
   width: 50%;
 }
 
-.form__input {
+.form__input-wrapper input {
   position: relative;
   font-family: "RobotoCondensed", "Arial", sans-serif;
   background-color: rgba(255, 255, 255, 0);
@@ -5399,33 +5399,33 @@ button,
           box-sizing: border-box;
   border-bottom: 1px solid #74819c;
 }
-.form__input::-webkit-input-placeholder {
+.form__input-wrapper input::-webkit-input-placeholder {
   color: #ffffff;
   font-size: 14px;
 }
-.form__input::-moz-placeholder {
+.form__input-wrapper input::-moz-placeholder {
   color: #ffffff;
   font-size: 14px;
 }
-.form__input:-ms-input-placeholder {
+.form__input-wrapper input:-ms-input-placeholder {
   color: #ffffff;
   font-size: 14px;
 }
-.form__input::-ms-input-placeholder {
+.form__input-wrapper input::-ms-input-placeholder {
   color: #ffffff;
   font-size: 14px;
 }
-.form__input::placeholder {
+.form__input-wrapper input::placeholder {
   color: #ffffff;
   font-size: 14px;
 }
 @media (max-width: 1199px) {
-  .form__input {
+  .form__input-wrapper input {
     padding-top: 28px;
   }
 }
 @media (max-width: 767px) {
-  .form__input {
+  .form__input-wrapper input {
     width: 200%;
     padding-top: 28px;
     border-bottom: 1px solid #74819c;
