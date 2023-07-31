@@ -3,8 +3,7 @@ const buttonPrev = document.querySelector('.swiper-button-prev');
 const buttonNext = document.querySelector('.swiper-button-next');
 
 const initCoachesSlider = () => {
-  // eslint-disable-next-line
-    new Swiper(coachesSlider, {
+  new Swiper(coachesSlider, {
 
     navigation: {
       prevEl: buttonPrev,

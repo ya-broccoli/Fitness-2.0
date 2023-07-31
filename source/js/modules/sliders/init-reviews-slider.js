@@ -3,7 +3,6 @@ const buttonNext = document.querySelector('.reviews__button--next');
 const buttonPrev = document.querySelector('.reviews__button--prev');
 
 const initSliderReviews = () => {
-  // eslint-disable-next-line
   new Swiper(reviewsSlider, {
 
     navigation: {

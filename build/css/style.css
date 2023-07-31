@@ -3298,6 +3298,8 @@ button,
 }
 
 .subscription__button {
+  display: block;
+  margin: 0 auto;
   font-size: 12px;
   font-style: normal;
   font-weight: 700;
@@ -3306,13 +3308,10 @@ button,
   text-transform: uppercase;
   width: 94.4%;
   min-height: 64px;
-  padding: 20px 10%;
+  padding: 24px 10%;
   background: rgba(255, 255, 255, 0);
   color: #102654;
   border: 2px solid #102654;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .subscription__button:hover, .subscription__button:focus {
   background: -webkit-gradient(linear, left top, right top, color-stop(10%, #ed0233), to(#003eb7));
@@ -5569,7 +5568,7 @@ button,
           justify-content: space-between;
 }
 
-.accordion__text {
+.accordion__wrapper p {
   font-size: 18px;
   line-height: 140%;
   font-weight: 300;
@@ -5577,7 +5576,7 @@ button,
   width: 78%;
 }
 @media (max-width: 767px) {
-  .accordion__text {
+  .accordion__wrapper p {
     font-size: 16px;
     width: 93%;
     line-height: 140%;

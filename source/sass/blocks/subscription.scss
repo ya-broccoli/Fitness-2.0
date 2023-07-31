@@ -287,6 +287,8 @@
 }
 
 .subscription__button {
+  display: block;
+  margin: 0 auto;
   font-size: 12px;
   font-style: normal;
   font-weight: 700;
@@ -295,11 +297,10 @@
   text-transform: uppercase;
   width: 94.4%;
   min-height: 64px;
-  padding: 20px 10%;
+  padding: 24px 10%;
   background: $color-transparent;
   color: $color-sapphire;
   border: 2px solid $color-sapphire;
-  align-items: center;
 
   &:hover,
   &:focus {
