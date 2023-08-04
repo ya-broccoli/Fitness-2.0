@@ -1,6 +1,12 @@
 .logo img {
   min-height: 44px;
 
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.5;
+  }
+
   @include vp-1199 {
     width: 82px;
     height: 17px;

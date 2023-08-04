@@ -121,11 +121,18 @@
   background-color: $color-transparent;
   right: 0;
   top: 24px;
-  padding-top: 6px;
+  padding-top: 11px;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $color-sapphire;
+  }
+
+  &:focus-visible {
+    background-color: $color-sapphire;
+  }
+
+  &:focus {
+    outline: none;
   }
 
   &:disabled {
@@ -133,7 +140,7 @@
   }
 
   @include vp-1199 {
-    padding-top: 0;
+    padding-top: 12px;
 
     &--coaches {
       top: 34px;
@@ -144,10 +151,11 @@
     width: 32px;
     height: 32px;
     right: 0;
-    top: 38%;
+    top: 34px;
+    padding-top: 6px;
 
     &--nutrition {
-      top: 19%;
+      top: 35%;
     }
 
     &--kids {
@@ -162,15 +170,17 @@
 
 .accordion__button-plus {
   stroke: $color-sapphire;
+  width: 18px;
+  height: 18px;
 
-  @include vp-1199 {
+  @include vp-767 {
     width: 10px;
     height: 10px;
   }
 }
 
 .accordion__button:hover .accordion__button-plus,
-.accordion__button:focus .accordion__button-plus {
+.accordion__button:focus-visible .accordion__button-plus {
   stroke: $color-default-white;
 }
 
@@ -178,16 +188,12 @@
   display: none;
 }
 
-.accordion__element.is-active .accordion__button {
-  background-color: $color-sapphire;
-}
-
 .accordion__element.is-active .accordion__button::before {
   position: absolute;
   content: "";
   width: 18px;
   height: 1px;
-  background-color: $color-default-white;
+  background-color: $color-sapphire;
   top: 20px;
   left: 29%;
 
@@ -196,4 +202,8 @@
     top: 15px;
     left: 32%;
   }
+}
+
+.accordion__element.is-active:hover .accordion__button::before {
+  background-color: $color-default-white;
 }

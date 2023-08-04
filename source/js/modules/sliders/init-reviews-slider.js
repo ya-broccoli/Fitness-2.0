@@ -11,7 +11,8 @@ const initSliderReviews = () => {
       },
 
       slidesPerView: 1,
-      spaceBetween: 30,
+      spaceBetween: 5000,
+      autoHeight: true,
     });
   }
   return null;

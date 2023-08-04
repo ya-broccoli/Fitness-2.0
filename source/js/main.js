@@ -5,6 +5,7 @@ import {initCoachesSlider} from './modules/sliders/init-coaches-slider';
 import {initSliderReviews} from './modules/sliders/init-reviews-slider';
 import {initTabs} from './modules/tabs/init-tabs';
 import {initAccordions} from './modules/accordion/init-accordion';
+import {initVideo} from './modules/video/init-video';
 
 // ---------------------------------
 
@@ -28,6 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initCoachesSlider();
     initSliderReviews();
     initAccordions();
+    initVideo();
     initModals();
   });
 });

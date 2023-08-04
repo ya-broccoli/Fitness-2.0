@@ -26,6 +26,8 @@
 .subscription__wrapper {
   margin: 0 auto;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 
   @include vp-767 {
     width: 100%;
@@ -41,53 +43,60 @@
   letter-spacing: 1.62px;
   width: 20%;
   margin: 0 auto;
-  margin-bottom: 16px;
+  margin-bottom: 5px;
 
   @include vp-1199 {
     font-size: 42px;
     letter-spacing: 1.26px;
     width: 179px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
   }
 
   @include vp-767 {
     font-size: 32px;
     letter-spacing: 0.96px;
     width: 47%;
-    margin-bottom: 22px;
+    margin-bottom: 8px;
   }
 }
 
 .subscription__controls {
   position: relative;
-  width: 29.3%;
   margin: 0 auto;
-  margin-bottom: 52px;
+  margin-bottom: 23px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   flex-direction: row;
-  column-gap: 13.5%;
+  gap: 0 46px;
+  padding-bottom: 14px;
 
-  &::before {
-    position: absolute;
+  &::after {
     content: "";
+    position: absolute;
+    bottom: 14px;
+    width: 100%;
     height: 2px;
     background-color: rgba(120, 120, 120, 0.2);
-    bottom: -13px;
-    left: 0;
-    right: 0;
   }
 
   @include vp-1199 {
     width: 332px;
     column-gap: 54px;
-    margin-bottom: 56px;
+    margin-bottom: 44px;
+    padding-bottom: 0;
+
+    &::after {
+      bottom: 0;
+    }
   }
 
   @include vp-767 {
     width: 100%;
+    max-width: 290px;
     margin: 0 auto;
     column-gap: 45px;
-    margin-bottom: 47px;
+    margin-bottom: 35px;
   }
 }
 
@@ -99,9 +108,11 @@
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  padding: 0;
+  padding: 13px 0;
   background-color: $color-ghost-white;
   color: rgba($color-sapphire, 0.5);
+  cursor: pointer;
+  user-select: none;
 
   &.is-active::before {
     position: absolute;
@@ -114,8 +125,9 @@
   }
 
   &.is-active,
-  &:hover,
-  &:focus {
+  &:not([disabled]):hover,
+  &:focus,
+  &:active {
     color: $color-sapphire;
 
     &::before {
@@ -123,7 +135,7 @@
       content: "";
       height: 2px;
       background-color: $color-torch-red;
-      bottom: -14px;
+      bottom: 0;
       left: -1px;
       right: 0;
     }
@@ -131,6 +143,7 @@
 
   &:disabled {
     color: rgba($color-sapphire, 0.3);
+    pointer-events: none;
   }
 
   @include vp-1199 {
@@ -138,7 +151,6 @@
   }
 
   @include vp-767 {
-    width: 33%;
     font-size: 16px;
 
     &.is-active::before {
@@ -149,17 +161,15 @@
 
 .subscription__list {
   font-family: $ff-roboto-condensed;
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 40px;
-  row-gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(305px, 100%));
+  gap: 40px;
   list-style: none;
   padding: 0;
-  width: 100%;
   margin: 0 auto;
 
   @include vp-1199 {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     row-gap: 40px;
     width: 100%;
   }
@@ -175,14 +185,12 @@
 
 .subscription__item {
   position: relative;
-  width: 31%;
   min-height: 448px;
   background: $color-default-white;
   border: 7px solid $color-default-white;
-  padding: 5.1% 5.5%;
+  padding: 59px 17.9%;
   box-sizing: border-box;
   text-align: center;
-  flex-grow: 1;
 
   &:hover {
     border: 7px solid $border-gradient;
@@ -192,6 +200,7 @@
 
   @include vp-1199 {
     width: 65%;
+    padding: 33px 5.9%;
     margin: 0 auto;
   }
 
@@ -301,6 +310,7 @@
   background: $color-transparent;
   color: $color-sapphire;
   border: 2px solid $color-sapphire;
+  user-select: none;
 
   &:hover,
   &:focus {

@@ -50,7 +50,7 @@
   @include vp-767 {
     font-size: 32px;
     letter-spacing: 0.96px;
-    margin-bottom: 42px;
+    margin-bottom: 41px;
   }
 }
 
@@ -72,16 +72,19 @@
   padding: 54px 8% 35px 9.6%;
   box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
   box-sizing: border-box;
-  display: flex;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 36px;
 
   @include vp-767 {
-    width: 100%;
-    padding: 49px 8% 33px 12%;
+    display: flex;
+    flex-direction: column;
+    padding: 46px 8% 35px 12%;
   }
 }
 
 .reviews__avatar {
-  width: 17.5%;
+  width: 100%;
   height: 80px;
   border-radius: 50%;
   background-color: $color-sapphire;
@@ -96,12 +99,12 @@
   }
 
   @include vp-767 {
-    width: 30.1%;
-    height: 68px;
     position: absolute;
-    margin: 0;
-    top: 40px;
-    left: 41px;
+    content: "";
+    top: 9.5%;
+    left: 14%;
+    width: 68px;
+    height: 68px;
   }
 }
 
@@ -112,10 +115,10 @@
 }
 
 .reviews__text-wrapper {
-  width: 72.3%;
+  width: 96%;
 
   @include vp-1199 {
-    width: 71%;
+    width: 95%;
   }
 
   @include vp-767 {
@@ -153,21 +156,22 @@
 
 .reviews__button {
   position: absolute;
-  top: 46px;
+  top: -7px;
   width: 56px;
   height: 56px;
   padding: 10px 10px 10px 5px;
   border-radius: 50%;
   background-color: $color-transparent;
   border: none;
+  cursor: pointer;
 
   &--prev {
-    left: 800%;
+    left: -84px;
   }
 
   &--next {
     transform: rotate(180deg);
-    right: 800%;
+    right: -84px;
   }
 
   &:hover,
@@ -179,15 +183,20 @@
     background-color: $color-sapphire;
   }
 
+  &:disabled {
+    pointer-events: none;
+    opacity: 50%;
+  }
+
   @include vp-1199 {
-    top: 34px;
+    top: -7px;
 
     &--prev {
-      left: -93%;
+      left: -83px;
     }
 
     &--next {
-      left: 0;
+      left: 54px;
     }
   }
 
@@ -195,14 +204,14 @@
     width: 32px;
     height: 32px;
     padding: 6px;
-    top: 43px;
+    top: 7px;
 
     &--prev {
-      left: -79%;
+      left: -197%;
     }
 
     &--next {
-      left: 60%;
+      left: 176%;
     }
   }
 }

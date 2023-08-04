@@ -35,7 +35,7 @@
   @include vp-1199 {
     font-size: 42px;
     width: 34%;
-    margin-bottom: 54px;
+    margin-bottom: 52px;
   }
 
   @include vp-767 {
@@ -54,12 +54,11 @@
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 211px 211px;
   gap: 40px;
 
   @include vp-1199 {
     gap: 30px;
-    grid-template-rows: 462px 211px;
+    grid-template-columns: 1fr 1fr;
   }
 
   @include vp-767 {
@@ -69,16 +68,18 @@
 }
 
 .promo__item--acsent {
-  grid-column: 1/2;
-  grid-row: 1/3;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  grid-row: span 2;
 
   @include vp-1199 {
-    grid-column: 1/3;
-    grid-row: 1/2;
+    grid-template-columns: 41% 1fr;
+    grid-column: span 2;
   }
 
   @include vp-767 {
+    display: flex;
     flex-direction: column;
   }
 }
@@ -89,7 +90,9 @@
   border: 7px solid $color-default-white;
   border-image: $border-gradient;
   border-image-slice: 7;
-  padding: 26px 28px;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
 
   @include vp-1199 {
     width: 100%;
@@ -106,12 +109,12 @@
   background-color: $color-torch-red;
   color: $color-default-white;
   font-family: $ff-roboto-condensed;
-  width: 50%;
-  padding: 45px 8%;
+  width: 100%;
+  padding: 45px 16%;
 
   @include vp-1199 {
-    width: 60.7%;
-    padding: 6.6%;
+    width: 100%;
+    padding: 43px 25px 39px 45px;
   }
 
   @include vp-767 {
@@ -123,8 +126,7 @@
 }
 
 .promo__image {
-  width: 50%;
-  height: 462px;
+  width: 100%;
   background-color: #f8f9fc;
 
   @include vp-1199 {
@@ -133,7 +135,6 @@
 
   @include vp-767 {
     width: 100%;
-    height: 299px;
   }
 }
 
@@ -198,7 +199,7 @@
     line-height: 140%;
 
     &--acsent {
-      padding-top: 12px;
+      padding-top: 10px;
       padding-bottom: 25px;
     }
   }
@@ -217,7 +218,7 @@
   text-transform: uppercase;
   padding: 0;
   padding-left: 2px;
-  margin-top: 65px;
+  margin-top: 50px;
   cursor: pointer;
   width: fit-content;
 
@@ -241,12 +242,21 @@
 
   &:focus {
     outline: 1px solid $color-sapphire;
-    padding: 8px;
-    margin-top: 58px;
-    margin-left: -7px;
 
     &::after {
       display: none;
+    }
+  }
+
+  &:active {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: $color-sapphire;
+      bottom: 3px;
+      left: 0;
     }
   }
 
@@ -258,7 +268,7 @@
     }
 
     &--gift {
-      margin-top: 42px;
+      margin-top: 25px;
     }
   }
 

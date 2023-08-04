@@ -3,6 +3,7 @@
 }
 
 .form__inputs-wrapper {
+  position: relative;
   display: flex;
   column-gap: 28px;
 
@@ -35,11 +36,28 @@
   width: 100%;
   padding: 21px 50px 5px 0;
   box-sizing: border-box;
-  border-bottom: 1px solid #74819c;
+  border-bottom: 1px solid rgba($color-default-white, 0.5);
 
   &::placeholder {
     color: $color-default-white;
     font-size: 14px;
+  }
+
+  &:hover {
+    border-bottom: 1px solid$color-default-white;
+  }
+
+  &:focus,
+  &:active {
+    border: 1px solid $color-default-white;
+  }
+
+  &:disabled {
+    border-bottom: 1px solid rgba($color-default-white, 0.3);
+
+    &::placeholder {
+      color: rgba($color-default-white, 0.4);
+    }
   }
 
   @include vp-1199 {
@@ -66,6 +84,25 @@
   padding: 17px 38%;
   margin-top: 26px;
   cursor: pointer;
+  text-align: center;
+  display: block;
+  user-select: none;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-egyptian-blue;
+    background-color: $color-default-white;
+  }
+
+  &:active {
+    color: $color-sapphire;
+  }
+
+  &:disabled {
+    border: 3px solid rgba($color-default-white, 0.5);
+    color: rgba($color-default-white, 0.5);
+    cursor: none;
+  }
 
   @include vp-1199 {
     margin-top: 29px;
@@ -75,4 +112,8 @@
     margin-top: 38px;
     padding: 17px 35%;
   }
+}
+
+.form span {
+  color: #ed0233;
 }

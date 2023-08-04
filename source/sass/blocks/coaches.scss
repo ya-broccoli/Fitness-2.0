@@ -15,13 +15,14 @@
   width: 100%;
 
   @include vp-1199 {
-    padding-bottom: 100px;
+    padding-bottom: 91px;
   }
 
   @include vp-767 {
     width: 92%;
+    margin: 0 auto;
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 61px;
   }
 }
 
@@ -56,7 +57,7 @@
   }
 
   @include vp-767 {
-    width: 85%;
+    width: 93.6%;
     margin: 0 auto;
   }
 }
@@ -70,6 +71,7 @@
   border: none;
   background-color: transparent;
   border-radius: 50%;
+  cursor: pointer;
 
   &--prev {
     right: 200%;
@@ -141,35 +143,30 @@
   list-style: none;
   margin: 0;
   padding: 0;
-
-  @include vp-1199 {
-    width: 100%;
-  }
 }
 
 .coaches__item {
   position: relative;
-  width: 260px;
   margin: 0;
   color: $color-default-white;
+
+  &:hover > .coaches__info {
+    display: block;
+  }
 
   @include vp-1199 {
     width: 268px;
   }
 
   @include vp-767 {
-    width: 85%;
+    width: 100%;
   }
 }
 
 .coaches__image {
   width: 100%;
-  height: 294px;
+  margin: 0 auto;
   background-color: $color-gray;
-
-  @include vp-767 {
-    height: 274px;
-  }
 }
 
 .coaches__image img {
@@ -196,35 +193,28 @@
 }
 
 .coaches__info {
+  display: none;
   position: absolute;
-  color: $color-transparent;
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 294px;
-
-  @include vp-767 {
-    min-height: 274px;
-  }
-}
-
-.coaches__item:hover .coaches__info {
-  position: absolute;
-  width: 100%;
-  min-height: 294px;
-  padding: 52px 57px;
+  height: 100%;
+  padding: 51px 57px 45px 57px;
   background-color: rgba(16, 38, 84, 0.89);
   color: $color-default-white;
-  top: 0;
-  left: 0;
+  overflow: auto;
+
+  @include vp-1199 {
+    padding: 50px 63px 46px 55px;
+  }
 
   @include vp-767 {
-    min-height: 274px;
-    padding: 42px 40px;
+    padding: 42px 50px 46px 51px;
   }
 }
 
-.coaches__item:hover .coaches__info-achivements-item--one {
+.coaches__item:hover .coaches__info-achivements-item--one,
+.coaches__item:focus .coaches__info-achivements-item--one {
   &::before {
     position: absolute;
     content: "";
@@ -241,7 +231,8 @@
   }
 }
 
-.coaches__item:hover .coaches__info-achivements-item--two {
+.coaches__item:hover .coaches__info-achivements-item--two,
+.coaches__item:focus .coaches__info-achivements-item--two {
   &::before {
     position: absolute;
     content: "";
@@ -258,7 +249,8 @@
   }
 }
 
-.coaches__item:hover .coaches__info-achivements-item--three {
+.coaches__item:hover .coaches__info-achivements-item--three,
+.coaches__item:focus .coaches__info-achivements-item--three {
   &::before {
     position: absolute;
     content: "";
@@ -276,11 +268,13 @@
   }
 }
 
-.coaches__item:hover .coaches__item-title {
+.coaches__item:hover .coaches__item-title,
+.coaches__item:focus .coaches__item-title {
   display: none;
 }
 
 .coaches__info-title {
+  text-align: center;
   font-size: 18px;
   line-height: 150%;
   margin: 0;

@@ -129,11 +129,13 @@
     display: block;
     margin: 0 auto;
     width: 100%;
+    max-width: 678px;
     height: 345px;
   }
 
   @include vp-767 {
     width: 100%;
+    max-width: 100%;
     height: 313px;
     position: absolute;
     top: 335px;
@@ -150,23 +152,28 @@
 .about__video-wrapper {
   position: absolute;
   width: 26.65%;
+  max-width: 364px;
   height: 229px;
-  bottom: 120px;
-  left: 39.5%;
+  top: 407px;
+  right: 33.86%;
   background-color: $color-gray;
 
   @include vp-1199 {
-    bottom: 2px;
+    top: 588px;
     width: 34.6%;
+    max-width: 266px;
     height: 167px;
-    left: 32.7%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
   }
 
   @include vp-767 {
     width: 100%;
-    position: absolute;
+    max-width: 100%;
     left: 0;
-    bottom: 70px;
+    top: 688px;
   }
 }
 
@@ -198,7 +205,7 @@
     height: 100px;
     background: $color-transparent;
     outline: 2px solid rgba($color-torch-red, 0.2);
-    transform: translate(-13%, -13%);
+    transform: translate(-49%, -49%);
     border-radius: 50%;
 
     @include vp-1199 {
@@ -223,7 +230,7 @@
     &::before {
       width: 70px;
       height: 70px;
-      transform: translate(-17%, -13%);
+      transform: translate(-52%, -50%);
     }
   }
 
@@ -255,7 +262,7 @@
   transform: translate(-50%, -50%);
 
   &::before {
-    transform: translate(-21%, -21%);
+    transform: translate(-50%, -50%);
     outline: 2px solid $color-sapphire;
   }
 
@@ -265,16 +272,17 @@
     transform: translate(-59%, -57%);
 
     &::before {
-      transform: translate(-25%, -20%);
+      transform: translate(-52%, -50%);
     }
   }
 
   @include vp-767 {
+    transform: translate(-50%, -50%);
     width: 40px;
     height: 40px;
 
     &::before {
-      transform: translate(-25%, -21%);
+      transform: translate(-53%, -49%);
     }
   }
 }
