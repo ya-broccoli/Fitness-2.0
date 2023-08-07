@@ -92,8 +92,8 @@
 
   @include vp-1199 {
     row-gap: 19px;
-    column-gap: 30px;
-    grid-template-columns: 50% 50%;
+    column-gap: 63px;
+    grid-template-columns: 44% 44%;
 
     &::after {
       left: 47%;
@@ -147,22 +147,24 @@
   font-weight: 400;
   line-height: 152.34%;
 
-  &:hover {
-    color: rgba($color-sapphire, 0.7);
-    border-bottom: 1px solid rgba($color-sapphire, 0.7);
-  }
+  &--phone,
+  &--email {
+    &:hover {
+      color: rgba($color-sapphire, 0.7);
+      border-bottom: 1px solid rgba($color-sapphire, 0.7);
+    }
 
-  &:focus {
-    border: 1px solid $color-sapphire;
-    padding: 5px 10px;
-    margin-left: -11px;
-    margin-top: -6px;
-  }
+    &:focus {
+      border: 1px solid $color-sapphire;
+      padding: 5px 10px;
+      margin-left: -11px;
+      margin-top: -6px;
+    }
 
-  &:active {
-    border-bottom: 1px solid $color-sapphire;
+    &:active {
+      border-bottom: 1px solid $color-sapphire;
+    }
   }
-
 
   @include vp-1199 {
     font-size: 18px;
