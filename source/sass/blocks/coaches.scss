@@ -19,10 +19,10 @@
   }
 
   @include vp-767 {
-    width: 92%;
+    width: 100%;
     margin: 0 auto;
     padding-top: 70px;
-    padding-bottom: 61px;
+    padding-bottom: 50px;
   }
 }
 
@@ -57,14 +57,15 @@
   }
 
   @include vp-767 {
-    width: 93.6%;
+    width: 77.6%;
+    min-height: 294px;
     margin: 0 auto;
   }
 }
 
 .coaches__button {
   position: absolute;
-  top: 50%;
+  top: 0;
   padding: 10px 9px 9px 5px;
   width: 56px;
   height: 56px;
@@ -74,11 +75,11 @@
   cursor: pointer;
 
   &--prev {
-    right: 200%;
+    right: 0;
   }
 
   &--next {
-    left: 200%;
+    left: 0;
     transform: rotate(180deg);
   }
 
@@ -92,29 +93,29 @@
   }
 
   @include vp-1199 {
-    top: 40%;
+    top: -14%;
 
     &--prev {
-      right: 0;
+      right: -52px;
     }
 
     &--next {
-      left: 0;
+      left: -52px;
     }
   }
 
   @include vp-767 {
-    top: 100%;
+    top: 38%;
     width: 32px;
     height: 32px;
     padding: 6px 6px 6px 3px;
 
     &--prev {
-      left: -120%;
+      right: -35px;
     }
 
     &--next {
-      left: 100%;
+      left: -37px;
     }
   }
 }
@@ -154,12 +155,17 @@
     display: block;
   }
 
+  &:focus > .coaches__info {
+    display: block;
+  }
+
   @include vp-1199 {
     width: 268px;
   }
 
   @include vp-767 {
     width: 100%;
+    min-height: 274px;
   }
 }
 
@@ -173,6 +179,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  @include vp-767 {
+    min-height: 274px;
+  }
 }
 
 .coaches__item-title {
@@ -202,14 +212,15 @@
   padding: 51px 57px 45px 57px;
   background-color: rgba(16, 38, 84, 0.89);
   color: $color-default-white;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   @include vp-1199 {
     padding: 50px 63px 46px 55px;
   }
 
   @include vp-767 {
-    padding: 42px 50px 46px 51px;
+    padding: 43px 39px 27px 39px;
   }
 }
 

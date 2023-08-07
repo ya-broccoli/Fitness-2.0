@@ -156,7 +156,7 @@
 
 .reviews__button {
   position: absolute;
-  top: -7px;
+  top: -16px;
   width: 56px;
   height: 56px;
   padding: 10px 10px 10px 5px;
@@ -166,12 +166,12 @@
   cursor: pointer;
 
   &--prev {
-    left: -84px;
+    left: -4px;
   }
 
   &--next {
     transform: rotate(180deg);
-    right: -84px;
+    right: -4px;
   }
 
   &:hover,
@@ -189,14 +189,14 @@
   }
 
   @include vp-1199 {
-    top: -7px;
+    top: -17px;
 
     &--prev {
-      left: -83px;
+      left: 0;
     }
 
     &--next {
-      left: 54px;
+      left: 0;
     }
   }
 
@@ -204,14 +204,14 @@
     width: 32px;
     height: 32px;
     padding: 6px;
-    top: 7px;
+    top: -9px;
 
     &--prev {
-      left: -197%;
+      left: 28px;
     }
 
     &--next {
-      left: 176%;
+      left: -3px;
     }
   }
 }
