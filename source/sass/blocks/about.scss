@@ -3,6 +3,7 @@
   background-color: $color-default-white;
   min-height: 756px;
   position: relative;
+  padding-bottom: 70px;
 
   @include vp-1199 {
     margin-bottom: 98px;

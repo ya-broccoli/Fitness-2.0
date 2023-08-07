@@ -2677,7 +2677,7 @@ button,
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   list-style: none;
-  min-width: 99px;
+  max-width: 99px;
   gap: 12px;
   margin: 0;
   padding: 0;
@@ -2740,6 +2740,7 @@ button,
   background-color: #ffffff;
   min-height: 756px;
   position: relative;
+  padding-bottom: 70px;
 }
 @media (max-width: 1199px) {
   .about {
@@ -3974,7 +3975,7 @@ button,
   position: relative;
   width: 100%;
   min-height: 67px;
-  padding: 24px 33%;
+  padding: 24px 20%;
   font-size: 12px;
   letter-spacing: 0.6px;
   text-transform: uppercase;
